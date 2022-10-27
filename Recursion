@@ -1,7 +1,8 @@
 //stair_climb_problem.
 //give number of ways in which n stairs can be climb by using either 1 or 2 or 3 step jump at a time.
+
 #include<stdio.h>
-#include<string.h>
+
 int stairs(int n)
 {
     //base case 1
@@ -28,4 +29,36 @@ int main()
     printf("enter number of starirs:");
     scanf("%d",&n);
     printf("%d",stairs(n));
+}
+
+
+//fibonacci series starting with indexing 0 .
+
+#include<stdio.h>
+
+int fibo( int n)
+{
+    //base case1
+    if(n==0)
+    {
+        return 0;
+    }
+    // base case 2
+    if(n==1)
+    {
+        return 1;
+    }
+
+    //recursive call
+    int ans = fibo(n-1)+fibo(n-2);
+
+    return ans ;
+}
+int main()
+{
+    int n;
+    printf("enter index of fibonacci series:");
+    scanf("%d",&n);
+    printf("%d",fibo(n));
+    return 0;
 }
