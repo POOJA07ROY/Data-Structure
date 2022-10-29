@@ -3,5 +3,6 @@
 
 //fibonacci series starting with indexing 0 .
 
-//print name of digits of given number
+//print name of digits of given number.
 
+// array is in ascending order(sorted) or not.
