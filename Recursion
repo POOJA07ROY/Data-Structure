@@ -1,10 +1,44 @@
-//stair_climb_problem.
-//give number of ways in which n stairs can be climb by using either 1 or 2 or 3 step jump at a time.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
-//fibonacci series starting with indexing 0 .
 
-//print name of digits of given number.
+int linear_search(int *arr,int n,int key)
+{
+    
+    if(arr[n]==key)
+    {
+        return n;
+    }
 
-// array is in ascending order(sorted) or not.
+    linear_search(arr,n-1,key);
 
-// get sum of elements of array.
+}
+
+
+int main()
+{
+    int n;
+    printf("enter size of array:");
+    scanf("%d",&n);
+    int arr[100];
+    for(int i=1;i<=n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    int key;
+    printf("enter key element:");
+    scanf("%d",&key);
+    int a = linear_search(arr,n,key);
+    
+    if(a>=1 && a<= n)
+    {
+        printf("%d is found at: %dth position",key,a);
+    }
+    else
+    {
+        printf("%d is not found in given array.",key);
+    }
+    return 0;
+}
