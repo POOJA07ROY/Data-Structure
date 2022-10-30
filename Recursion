@@ -1,10 +1,40 @@
-//stair_climb_problem.
-//give number of ways in which n stairs can be climb by using either 1 or 2 or 3 step jump at a time.
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 
-//fibonacci series starting with indexing 0 .
 
-//print name of digits of given number.
+int sum(int *arr,int n)
+{
+    
+    if(n==0)
+    {
+        return 0;
+    }
 
-// array is in ascending order(sorted) or not.
+    if (n==1)
+    {
+       return arr[1];
+        
+    }
+     
+    int s = arr[n]+sum( arr,n-1);
+    return s;
+}
 
-// get sum of elements of array.
+
+int main()
+{
+    int n;
+    printf("enter size of array:");
+    scanf("%d",&n);
+    int arr[100];
+    for(int i=1;i<=n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    int a = sum(arr,n);
+    
+    printf("sum of given array: %d",a);
+    return 0;
+}
